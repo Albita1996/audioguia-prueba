@@ -14,4 +14,10 @@ class visita extends Model
         'descripcion',
         'activo',
     ];
+
+
+public function recorridos()
+{
+    return $this->hasMany(Recorrido::class, 'visita_id');
+}
 }
